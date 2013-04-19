@@ -37,16 +37,46 @@ regKey.values(function (err, items) {
 ```
 
 The following options are processed by the Winreg constructor:
-  + __host__  the optional hostname, must start with the '\\\\' sequence
-  + __hive__  the optional hive id (see below), the default is __HKLM__
-  + __key__   the optional key, the default is th root key
+
+  * __host__  the optional hostname, must start with the '\\\\' sequence
+  * __hive__  the optional hive id (see below), the default is __HKLM__
+  * __key__   the optional key, the default is th root key
 
 The instances of Winreg provide access to a single registry key. The hive id can be one of the following:
-  + __HKLM__  HKEY_LOCAL_MACHINE
-  + __HKCU__  HKEY_CURRENT_USER
-  + __HKCR__  HKEY_CLASSES_ROOT
-  + __HKCC__  HKEY_CURRENT_CONFIG
-  + __HKU__   HKEY_USERS
+
+  * __HKLM__  HKEY_LOCAL_MACHINE
+  * __HKCU__  HKEY_CURRENT_USER
+  * __HKCR__  HKEY_CLASSES_ROOT
+  * __HKCC__  HKEY_CURRENT_CONFIG
+  * __HKU__   HKEY_USERS
 
 The key, if specified, has to start, but must not be terminated with a '\\' character.
 
+Registry values are returned as objects, containing the following information:
+
+  * __host__  the hostname, if it has been set in the options
+  * __hive__  the hive id, as specified in the options
+  * __key__   the key, as specified in the options
+  * __name__  the name of the registry value
+  * __type__  one of the types listed below
+  * __value__ a string containing the value
+
+
+Registry values can have one of the following types:
+
+  * __REG_SZ__        a string value
+  * __REG_MULTI_SZ__  a multiline string value
+  * __REG_EXPAND_SZ__ an expandable string value
+  * __REG_DWORD__     a double word value (32 bit integer)
+  * __REG_QWORD__     a quad word value (64 bit integer)
+  * __REG_BINARY__    a binary value
+  * __REG_NONE__      a value of unknown type
+
+Following methods are provided by instances of Winreg:
+
+  * __values__ (callback)
+  * __get__ (name, callback)
+  * __set__ (name, type, value, callback)
+  * __remove__ (name, callback)
+  * __create__ (callback)
+  * __erase__ (callback)
