@@ -13,7 +13,7 @@
     "x64",
     "ia32"
   ],
-  "repository": "",
+  "repository": "git://github.com/fresc81/node-winreg.git",
   "keywords": [
     "windows",
     "registry"
