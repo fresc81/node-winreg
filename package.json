@@ -6,14 +6,24 @@
   "scripts": {
     "test": "node test.js"
   },
-  "os" : [ "win32" ],
-  "cpu" : [ "x64", "ia32" ],
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "ia32"
+  ],
   "repository": "",
   "keywords": [
     "windows",
     "registry"
   ],
-  "author": "Paul Bottin",
+  "author": {
+    "name": "Paul Bottin"
+  },
   "license": "BSD",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "readme": "node-winreg\r\n===========\r\n\r\nnode module that provides access to the Windows Registry through the REG commandline tool",
+  "_id": "winreg@0.0.1",
+  "_from": "winreg@"
 }
