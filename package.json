@@ -1,6 +1,6 @@
 {
   "name": "winreg",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "provides access to the windows registry through the REG tool",
   "main": "lib/registry.js",
   "scripts": {
