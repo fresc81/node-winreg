@@ -23,7 +23,5 @@
   },
   "license": "BSD",
   "readmeFilename": "README.md",
-  "readme": "node-winreg\r\n===========\r\n\r\nnode module that provides access to the Windows Registry through the REG commandline tool",
-  "_id": "winreg@0.0.1",
-  "_from": "winreg@"
+  "readme": "node-winreg\r\n===========\r\n\r\nnode module that provides access to the Windows Registry through the REG commandline tool"
 }
