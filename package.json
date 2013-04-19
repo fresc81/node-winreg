@@ -13,15 +13,16 @@
     "x64",
     "ia32"
   ],
-  "repository": "git://github.com/fresc81/node-winreg.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fresc81/node-winreg.git"
+  },
   "keywords": [
     "windows",
     "registry"
   ],
-  "author": {
-    "name": "Paul Bottin"
-  },
+  "author": "Paul Bottin",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "readme": "node-winreg\r\n===========\r\n\r\nnode module that provides access to the Windows Registry through the REG commandline tool"
+  "gitHead": "36cfe63a8dcb700cf44b0b7317827099d19c26c1"
 }
