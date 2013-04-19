@@ -1,0 +1,19 @@
+{
+  "name": "winreg",
+  "version": "0.0.1",
+  "description": "provides access to the windows registry through the REG tool",
+  "main": "lib/registry.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "os" : [ "win32" ],
+  "cpu" : [ "x64", "ia32" ],
+  "repository": "",
+  "keywords": [
+    "windows",
+    "registry"
+  ],
+  "author": "Paul Bottin",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
