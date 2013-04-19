@@ -74,9 +74,40 @@ Registry values can have one of the following types:
 
 Following methods are provided by instances of Winreg:
 
-  * __values__ (callback)
-  * __get__ (name, callback)
-  * __set__ (name, type, value, callback)
-  * __remove__ (name, callback)
-  * __create__ (callback)
-  * __erase__ (callback)
+<table>
+  <tr>
+    <th>Method</th>
+    <th>Parameters</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>values</td>
+    <td>callback</td>
+    <td>list the values under this key</td>
+  </tr>
+  <tr>
+    <td>get</td>
+    <td>name, callback</td>
+    <td>gets a value by it's name</td>
+  </tr>
+  <tr>
+    <td>set</td>
+    <td>name, type, value, callback</td>
+    <td>sets a value</td>
+  </tr>
+  <tr>
+    <td>remove</td>
+    <td>name, callback</td>
+    <td>remove the value with the given key</td>
+  </tr>
+  <tr>
+    <td>create</td>
+    <td>callback</td>
+    <td>create this key</td>
+  </tr>
+  <tr>
+    <td>erase</td>
+    <td>callback</td>
+    <td>remove this key</td>
+  </tr>
+</table>
