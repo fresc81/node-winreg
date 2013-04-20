@@ -6,40 +6,58 @@ var Registry = require(__dirname+'/lib/registry.js')
       hive: Registry.HKCU,
       key:  '\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'
     })
+,   r2 = new Registry({
+      hive: Registry.HKCU,
+      key:  '\\Control Panel\\Desktop'
+    })
 
-// list values
-r1
-.   values(function (err, items) {
+// get parent key
+console.log('parent of "'+r2.path+'" -> "'+r2.parent.path+'"');
+
+// list subkeys
+r2
+.   keys(function (err, items) {
       
       if (!err)
-        console.log(JSON.stringify(items));
+        for (var i in items)
+          console.log('subkey of "'+r2.path+'": '+items[i].path);
       
-      // query named value
+      // list values
       r1
-      .   get(items[0].name, function (err, item) {
+      .   values(function (err, items) {
             
             if (!err)
-              console.log(JSON.stringify(item));
+              console.log(JSON.stringify(items));
             
-            // add value
+            // query named value
             r1
-            .   set('bla', Registry.REG_SZ, 'hello world!', function (err) {
+            .   get(items[0].name, function (err, item) {
                   
                   if (!err)
-                    console.log('value written');
+                    console.log(JSON.stringify(item));
                   
-                  // delete value
+                  // add value
                   r1
-                  .   remove('bla', function (err) {
+                  .   set('bla', Registry.REG_SZ, 'hello world!', function (err) {
                         
                         if (!err)
-                          console.log('value deleted');
+                          console.log('value written');
                         
+                        // delete value
+                        r1
+                        .   remove('bla', function (err) {
+                              
+                              if (!err)
+                                console.log('value deleted');
+                              
+                            })
+                        ;
                       })
                   ;
                 })
             ;
           })
       ;
+
     })
 ;
