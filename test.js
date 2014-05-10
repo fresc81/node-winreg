@@ -27,14 +27,14 @@ r2
       .   values(function (err, items) {
             
             if (!err)
-              console.log(JSON.stringify(items));
+              console.log(JSON.stringify(items, null, '\t'));
             
             // query named value
             r1
             .   get(items[0].name, function (err, item) {
                   
                   if (!err)
-                    console.log(JSON.stringify(item));
+                    console.log(JSON.stringify(item, null, '\t'));
                   
                   // add value
                   r1
