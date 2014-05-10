@@ -6,13 +6,6 @@
   "scripts": {
     "test": "node test.js"
   },
-  "os": [
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "ia32"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/fresc81/node-winreg.git"
