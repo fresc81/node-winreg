@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>node-winreg by fresc81</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>node-winreg</h1>
+        <p>node module that provides access to the Windows Registry through the REG commandline tool</p>
+
+        <p class="view"><a href="https://github.com/fresc81/node-winreg">View the Project on GitHub <small>fresc81/node-winreg</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/fresc81/node-winreg/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/fresc81/node-winreg/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/fresc81/node-winreg">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="node-winreg" class="anchor" href="#node-winreg"><span class="octicon octicon-link"></span></a>node-winreg</h1>
+
+<p>node module that provides access to the Windows Registry through the REG commandline tool</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre lang="shell"><code>npm install winreg 
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Let's start with an example. The code below lists the autostart programs of the current user.</p>
+
+<div class="highlight highlight-javascript"><pre>
+<span class="kd">var</span> <span class="nx">Winreg</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'winreg'</span><span class="p">)</span>
+<span class="p">,</span>   <span class="nx">regKey</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Winreg</span><span class="p">({</span>
+      <span class="nx">hive</span><span class="o">:</span> <span class="nx">Winreg</span><span class="p">.</span><span class="nx">HKCU</span><span class="p">,</span>                                          <span class="c1">// HKEY_CURRENT_USER</span>
+      <span class="nx">key</span><span class="o">:</span>  <span class="s1">'\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'</span> <span class="c1">// key containing autostart programs</span>
+    <span class="p">})</span>
+
+<span class="c1">// list autostart programs</span>
+<span class="nx">regKey</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">items</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'ERROR: '</span><span class="o">+</span><span class="nx">err</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">items</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'ITEM: '</span><span class="o">+</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="o">+</span><span class="s1">'\t'</span><span class="o">+</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span><span class="o">+</span><span class="s1">'\t'</span><span class="o">+</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">});</span>
+
+</pre></div>
+
+<p>The following options are processed by the Winreg constructor:</p>
+
+<ul>
+<li>
+<strong>host</strong>  the optional hostname, must start with the '\\' sequence</li>
+<li>
+<strong>hive</strong>  the optional hive id (see below), the default is <strong>HKLM</strong>
+</li>
+<li>
+<strong>key</strong>   the optional key, the default is th root key</li>
+</ul><p>The key, if specified, has to start, but must not be terminated with a '\' character.</p>
+
+<p>The instances of Winreg provide access to a single registry key. The hive id can be one of the following:</p>
+
+<ul>
+<li>
+<strong>HKLM</strong>  HKEY_LOCAL_MACHINE</li>
+<li>
+<strong>HKCU</strong>  HKEY_CURRENT_USER</li>
+<li>
+<strong>HKCR</strong>  HKEY_CLASSES_ROOT</li>
+<li>
+<strong>HKCC</strong>  HKEY_CURRENT_CONFIG</li>
+<li>
+<strong>HKU</strong>   HKEY_USERS</li>
+</ul><p>Registry values are returned as objects, containing the following information:</p>
+
+<ul>
+<li>
+<strong>host</strong>  the hostname, if it has been set in the options</li>
+<li>
+<strong>hive</strong>  the hive id, as specified in the options</li>
+<li>
+<strong>key</strong>   the key, as specified in the options</li>
+<li>
+<strong>name</strong>  the name of the registry value</li>
+<li>
+<strong>type</strong>  one of the types listed below</li>
+<li>
+<strong>value</strong> a string containing the value</li>
+</ul><p>Registry values can have one of the following types:</p>
+
+<ul>
+<li>
+<strong>REG_SZ</strong>        a string value</li>
+<li>
+<strong>REG_MULTI_SZ</strong>  a multiline string value</li>
+<li>
+<strong>REG_EXPAND_SZ</strong> an expandable string value</li>
+<li>
+<strong>REG_DWORD</strong>     a double word value (32 bit integer)</li>
+<li>
+<strong>REG_QWORD</strong>     a quad word value (64 bit integer)</li>
+<li>
+<strong>REG_BINARY</strong>    a binary value</li>
+<li>
+<strong>REG_NONE</strong>      a value of unknown type</li>
+</ul><p>Following methods are provided by instances of Winreg:</p>
+
+<table>
+<tr>
+<th>Method</th>
+    <th>Parameters</th>
+    <th>Description</th>
+  </tr>
+<tr>
+<td>values</td>
+    <td>callback</td>
+    <td>list the values under this key</td>
+  </tr>
+<tr>
+<td>keys</td>
+    <td>callback</td>
+    <td>list the subkeys of this key</td>
+  </tr>
+<tr>
+<td>get</td>
+    <td>name, callback</td>
+    <td>gets a value by it's name</td>
+  </tr>
+<tr>
+<td>set</td>
+    <td>name, type, value, callback</td>
+    <td>sets a value</td>
+  </tr>
+<tr>
+<td>remove</td>
+    <td>name, callback</td>
+    <td>remove the value with the given key</td>
+  </tr>
+<tr>
+<td>create</td>
+    <td>callback</td>
+    <td>create this key</td>
+  </tr>
+<tr>
+<td>erase</td>
+    <td>callback</td>
+    <td>remove this key</td>
+  </tr>
+</table><p>Following readonly properties are provided by instances of Winreg:</p>
+
+<table>
+<tr>
+<th>Property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+<tr>
+<td>host</td>
+    <td>string</td>
+    <td>the hostname, if specified in the options</td>
+  </tr>
+<tr>
+<td>hive</td>
+    <td>string</td>
+    <td>the registry hive</td>
+  </tr>
+<tr>
+<td>key</td>
+    <td>string</td>
+    <td>the registry key</td>
+  </tr>
+<tr>
+<td>path</td>
+    <td>string</td>
+    <td>this key's path</td>
+  </tr>
+<tr>
+<td>parent</td>
+    <td>Winreg</td>
+    <td>a new Winreg instance initialized with the parent key</td>
+  </tr>
+</table>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/fresc81">fresc81</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
