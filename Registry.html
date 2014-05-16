@@ -40,44 +40,6 @@
 					</ul>
 				</li>
 				
-				<li class="dropdown">
-					<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="global.html#createCallback">createCallback</a>
-						</li>
-						
-						<li>
-							<a href="global.html#eraseCallback">eraseCallback</a>
-						</li>
-						
-						<li>
-							<a href="global.html#getCallback">getCallback</a>
-						</li>
-						
-						<li>
-							<a href="global.html#keysCallback">keysCallback</a>
-						</li>
-						
-						<li>
-							<a href="global.html#removeCallback">removeCallback</a>
-						</li>
-						
-						<li>
-							<a href="global.html#setCallback">setCallback</a>
-						</li>
-						
-						<li>
-							<a href="global.html#valuesCallback">valuesCallback</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
 			</ul>
 		</div>
 	</div>
@@ -116,7 +78,7 @@
     
     
     <div class="description">
-        <p>creates a registry object, which provides access to a single Registry key</p>
+        <p>Creates a registry object, which provides access to a single registry key.</p>
     </div>
     
 
@@ -166,24 +128,11 @@
 
             
 
-            <td class="description last"><p>the options</p></td>
-        </tr>
+            <td class="description last"><p>the options</p>
+                <h6>Properties</h6>
+                
 
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	<h5 class="subsection-title">Properties:</h5>
-
-	<dl>
-
-<table class="props table table-striped">
+<table class="params table table-striped">
     <thead>
 	<tr>
 		
@@ -192,6 +141,8 @@
 
 		<th>Type</th>
 
+		
+		<th>Argument</th>
 		
 
 		
@@ -205,18 +156,28 @@
 
         <tr>
             
-                <td class="name"><code>options.host</code></td>
+                <td class="name"><code>host</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">object</span>
 
 
             
             </td>
 
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -228,18 +189,28 @@
 
         <tr>
             
-                <td class="name"><code>options.hive</code></td>
+                <td class="name"><code>hive</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">object</span>
 
 
             
             </td>
 
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -251,18 +222,28 @@
 
         <tr>
             
-                <td class="name"><code>options.key</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">object</span>
 
 
             
             </td>
 
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -273,8 +254,18 @@
 	
 	</tbody>
 </table>
-</dl>
 
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
 	
 
 	
@@ -337,17 +328,27 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="HIVES"><span class="type-signature">&lt;static> </span>HIVES<span class="type-signature"></span></h4>
+    <h4 class="name" id="HIVES"><span class="type-signature">&lt;static> </span>HIVES<span class="type-signature"> :array</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>collection of available registry hive keys</p>
+        <p>Collection of available registry hive keys.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">array</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -388,17 +389,27 @@
         
             
 <dt>
-    <h4 class="name" id="HKCC"><span class="type-signature">&lt;static> </span>HKCC<span class="type-signature"></span></h4>
+    <h4 class="name" id="HKCC"><span class="type-signature">&lt;static> </span>HKCC<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry hive key CURRENT_CONFIG</p>
+        <p>Registry hive key CURRENT_CONFIG.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -439,17 +450,27 @@
         
             
 <dt>
-    <h4 class="name" id="HKCR"><span class="type-signature">&lt;static> </span>HKCR<span class="type-signature"></span></h4>
+    <h4 class="name" id="HKCR"><span class="type-signature">&lt;static> </span>HKCR<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry hive key CLASSES_ROOT</p>
+        <p>Registry hive key CLASSES_ROOT.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -490,17 +511,27 @@
         
             
 <dt>
-    <h4 class="name" id="HKCU"><span class="type-signature">&lt;static> </span>HKCU<span class="type-signature"></span></h4>
+    <h4 class="name" id="HKCU"><span class="type-signature">&lt;static> </span>HKCU<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry hive key CURRENT_USER</p>
+        <p>Registry hive key CURRENT_USER.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -541,17 +572,27 @@
         
             
 <dt>
-    <h4 class="name" id="HKLM"><span class="type-signature">&lt;static> </span>HKLM<span class="type-signature"></span></h4>
+    <h4 class="name" id="HKLM"><span class="type-signature">&lt;static> </span>HKLM<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry hive key LOCAL_MACHINE</p>
+        <p>Registry hive key LOCAL_MACHINE.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -592,17 +633,27 @@
         
             
 <dt>
-    <h4 class="name" id="HKU"><span class="type-signature">&lt;static> </span>HKU<span class="type-signature"></span></h4>
+    <h4 class="name" id="HKU"><span class="type-signature">&lt;static> </span>HKU<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry hive key USERS</p>
+        <p>Registry hive key USERS.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -643,17 +694,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_BINARY"><span class="type-signature">&lt;static> </span>REG_BINARY<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_BINARY"><span class="type-signature">&lt;static> </span>REG_BINARY<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry value type BINARY</p>
+        <p>Registry value type BINARY.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -694,17 +755,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_DWORD"><span class="type-signature">&lt;static> </span>REG_DWORD<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_DWORD"><span class="type-signature">&lt;static> </span>REG_DWORD<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry value type DOUBLE_WORD</p>
+        <p>Registry value type DOUBLE_WORD.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -745,17 +816,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_EXPAND_SZ"><span class="type-signature">&lt;static> </span>REG_EXPAND_SZ<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_EXPAND_SZ"><span class="type-signature">&lt;static> </span>REG_EXPAND_SZ<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry value type EXPANDABLE_STRING</p>
+        <p>Registry value type EXPANDABLE_STRING.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -796,17 +877,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_MULTI_SZ"><span class="type-signature">&lt;static> </span>REG_MULTI_SZ<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_MULTI_SZ"><span class="type-signature">&lt;static> </span>REG_MULTI_SZ<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry value type MULTILINE_STRING</p>
+        <p>Registry value type MULTILINE_STRING.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -847,17 +938,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_NONE"><span class="type-signature">&lt;static> </span>REG_NONE<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_NONE"><span class="type-signature">&lt;static> </span>REG_NONE<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry value type UNKNOWN</p>
+        <p>Registry value type UNKNOWN.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -898,17 +999,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_QWORD"><span class="type-signature">&lt;static> </span>REG_QWORD<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_QWORD"><span class="type-signature">&lt;static> </span>REG_QWORD<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry value type QUAD_WORD</p>
+        <p>Registry value type QUAD_WORD.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -949,17 +1060,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_SZ"><span class="type-signature">&lt;static> </span>REG_SZ<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_SZ"><span class="type-signature">&lt;static> </span>REG_SZ<span class="type-signature"> :string</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>registry value type STRING</p>
+        <p>Registry value type STRING.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -1000,17 +1121,27 @@
         
             
 <dt>
-    <h4 class="name" id="REG_TYPES"><span class="type-signature">&lt;static> </span>REG_TYPES<span class="type-signature"></span></h4>
+    <h4 class="name" id="REG_TYPES"><span class="type-signature">&lt;static> </span>REG_TYPES<span class="type-signature"> :array</span></h4>
     
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>collection of available registry value types</p>
+        <p>Collection of available registry value types.</p>
     </div>
     
     
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">array</span>
+
+
+            </li>
+        </ul>
     
 
     
@@ -1058,7 +1189,7 @@
 <dd>
     
     <div class="description">
-        <p>the hive id</p>
+        <p>The hive id.</p>
     </div>
     
     
@@ -1119,7 +1250,7 @@
 <dd>
     
     <div class="description">
-        <p>the hostname</p>
+        <p>The hostname.</p>
     </div>
     
     
@@ -1180,7 +1311,7 @@
 <dd>
     
     <div class="description">
-        <p>the registry key name</p>
+        <p>The registry key name.</p>
     </div>
     
     
@@ -1241,7 +1372,7 @@
 <dd>
     
     <div class="description">
-        <p>the parent registry key</p>
+        <p>The parent registry key.</p>
     </div>
     
     
@@ -1302,7 +1433,7 @@
 <dd>
     
     <div class="description">
-        <p>the full path to the registry key</p>
+        <p>The full path to the registry key.</p>
     </div>
     
     
@@ -1362,7 +1493,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(cb)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
     
     
 </dt>
@@ -1370,7 +1501,7 @@
     
     
     <div class="description">
-        <p>create this registry key</p>
+        <p>Create this registry key. Note that this is a no-op if the key already exists.</p>
     </div>
     
 
@@ -1410,7 +1541,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#createCallback">createCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -1420,7 +1551,68 @@
 
             
 
-            <td class="description last"><p>callback function</p></td>
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
         </tr>
 
 	
@@ -1470,6 +1662,29 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
 </dd>
@@ -1477,7 +1692,7 @@
         
             
 <dt>
-    <h4 class="name" id="erase"><span class="type-signature"></span>erase<span class="signature">(cb)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">(cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
     
     
 </dt>
@@ -1485,7 +1700,7 @@
     
     
     <div class="description">
-        <p>erase this registry key and it's contents</p>
+        <p>Delete this key and all subkeys from the registry.</p>
     </div>
     
 
@@ -1525,7 +1740,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#eraseCallback">eraseCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -1535,7 +1750,68 @@
 
             
 
-            <td class="description last"><p>callback function</p></td>
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
         </tr>
 
 	
@@ -1585,6 +1861,29 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
 </dd>
@@ -1592,7 +1891,7 @@
         
             
 <dt>
-    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(name, cb)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="erase"><span class="type-signature"></span>erase<span class="signature">(cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
     
     
 </dt>
@@ -1600,7 +1899,206 @@
     
     
     <div class="description">
-        <p>retrieve a named value from this registry key</p>
+        <p>Remove all subkeys and values (including the default value) from this registry key.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(name, cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets a named value from this registry key.</p>
     </div>
     
 
@@ -1663,7 +2161,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#getCallback">getCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -1673,7 +2171,101 @@
 
             
 
-            <td class="description last"><p>callback function</p></td>
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>item</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="RegistryItem.html">RegistryItem</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the retrieved registry item</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
         </tr>
 
 	
@@ -1723,6 +2315,29 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
 </dd>
@@ -1730,7 +2345,7 @@
         
             
 <dt>
-    <h4 class="name" id="keys"><span class="type-signature"></span>keys<span class="signature">(cb)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="keyExists"><span class="type-signature"></span>keyExists<span class="signature">(cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
     
     
 </dt>
@@ -1738,7 +2353,7 @@
     
     
     <div class="description">
-        <p>retrieve all subkeys from this registry key</p>
+        <p>Checks if this key already exists.</p>
     </div>
     
 
@@ -1778,7 +2393,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#keysCallback">keysCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -1788,7 +2403,101 @@
 
             
 
-            <td class="description last"><p>callback function</p></td>
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>exists</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>true if a registry key with this name already exists</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
         </tr>
 
 	
@@ -1838,6 +2547,29 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
 </dd>
@@ -1845,7 +2577,7 @@
         
             
 <dt>
-    <h4 class="name" id="remove"><span class="type-signature"></span>remove<span class="signature">(name, cb)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="keys"><span class="type-signature"></span>keys<span class="signature">(cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
     
     
 </dt>
@@ -1853,7 +2585,240 @@
     
     
     <div class="description">
-        <p>remove a named value from this registry key</p>
+        <p>Retrieve all subkeys from this registry key.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>items</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an array of <a href="Registry.html"><code>Registry</code></a> objects</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="remove"><span class="type-signature"></span>remove<span class="signature">(name, cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Remove a named value from this registry key. If name is empty, sets the default value of this key.
+Note that the key must be existing.</p>
     </div>
     
 
@@ -1916,7 +2881,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#removeCallback">removeCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -1926,7 +2891,68 @@
 
             
 
-            <td class="description last"><p>callback function</p></td>
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
         </tr>
 
 	
@@ -1976,6 +3002,29 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
 </dd>
@@ -1983,7 +3032,7 @@
         
             
 <dt>
-    <h4 class="name" id="set"><span class="type-signature"></span>set<span class="signature">(name, type, value, cb)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="set"><span class="type-signature"></span>set<span class="signature">(name, type, value, cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
     
     
 </dt>
@@ -1991,7 +3040,7 @@
     
     
     <div class="description">
-        <p>put a value into this registry key, overwrites existing value</p>
+        <p>Sets a named value in this registry key, overwriting an already existing value.</p>
     </div>
     
 
@@ -2100,7 +3149,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#setCallback">setCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -2110,7 +3159,68 @@
 
             
 
-            <td class="description last"><p>callback function</p></td>
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
         </tr>
 
 	
@@ -2160,6 +3270,29 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
 </dd>
@@ -2167,7 +3300,7 @@
         
             
 <dt>
-    <h4 class="name" id="values"><span class="type-signature"></span>values<span class="signature">(cb)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="valueExists"><span class="type-signature"></span>valueExists<span class="signature">(cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
     
     
 </dt>
@@ -2175,7 +3308,7 @@
     
     
     <div class="description">
-        <p>retrieve all values from this registry key</p>
+        <p>Checks if a value with the given name already exists within this key.</p>
     </div>
     
 
@@ -2215,7 +3348,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#valuesCallback">valuesCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -2225,7 +3358,101 @@
 
             
 
-            <td class="description last"><p>callback function</p></td>
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>exists</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>true if a value with the given name was found in this key</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
         </tr>
 
 	
@@ -2275,6 +3502,261 @@
     
     
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="values"><span class="type-signature"></span>values<span class="signature">(cb)</span><span class="type-signature"> &rarr; {<a href="Registry.html">Registry</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieve all values from this registry key.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">valuesCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>callback function</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">error</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>error object or null if successful</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>items</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an array of <a href="RegistryItem.html"><code>RegistryItem</code></a> objects</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this registry key object</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Registry.html">Registry</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
     
     
 </dd>
@@ -2297,6 +3779,9 @@
 				<div class="clearfix"></div>
 				<footer>
 					
+					<style>#forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial, sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#33B5E5;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;}#forkongithub a{width:200px;z-index:10000;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/fresc81/node-winreg">Fork me on GitHub</a></span>
+					<br />
+					
 					
 		<span class="copyright">
 		Copyright &copy; 2014 Paul Bottin.
@@ -2305,7 +3790,7 @@
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a>
-		on 2014-05-12T12:18:50+02:00 using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on 2014-05-16T16:31:15+02:00 using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
