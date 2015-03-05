@@ -1,4 +1,6 @@
 
+Array.prototype.someNewMethod = function() {};
+
 var Registry = require(__dirname+'/lib/registry.js')
 
 // create a registry client
