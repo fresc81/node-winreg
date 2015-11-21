@@ -1,6 +1,8 @@
 node-winreg
 ===========
 
+[![Join the chat at https://gitter.im/fresc81/node-winreg](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fresc81/node-winreg?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 node module that provides access to the Windows Registry through the REG commandline tool
 
 
