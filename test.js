@@ -1,4 +1,6 @@
 
+Array.prototype.someNewMethod = function() {};
+
 var Registry = require(__dirname+'/lib/registry.js')
 
 // create a registry client
@@ -19,7 +21,7 @@ r2
 .   keys(function (err, items) {
       
       if (!err)
-        for (var i in items)
+        for (var i = 0, l = items.length; i < l; i++)
           console.log('subkey of "'+r2.path+'": '+items[i].path);
       
       // list values
