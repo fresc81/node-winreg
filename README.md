@@ -47,6 +47,9 @@ The following options are processed by the Winreg constructor:
 
 The key, if specified, has to start, but must not be terminated with a '\\' character.
 
+On 64 Bit Windows operating systems the following option can be used to select the 32 or 64 Bit versions of the keys:
+
+  * __arch__  the optional arch version string to be used, only valid on 64 Bit Windows, if specified must be one of 'x86' or 'x64'
 
 The instances of Winreg provide access to a single registry key. The hive id can be one of the following:
 
