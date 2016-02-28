@@ -3,12 +3,12 @@ branches:
     - master
 
 # Test against this version of Node.js
-environment:
-  matrix:
+#environment:
+#  matrix:
   # nodejs LTS
-  - nodejs_version: 4.3
+#  - NODEJS_VERSION: "4.3"
   # nodejs stable
-  - nodejs_version: 5
+#  - NODEJS_VERSION: "5"
 
 platform:
   - x86
@@ -17,7 +17,7 @@ platform:
 # Install scripts. (runs after repo cloning)
 install:
   # Get the latest stable version of Node.js or io.js
-  - ps: Install-Product node $env:nodejs_version $env:platform
+  # - ps: Install-Product node $env:NODEJS_VERSION $env:platform
   # install modules
   - npm install
 
