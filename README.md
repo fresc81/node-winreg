@@ -1,9 +1,10 @@
 
-# node-winreg #
-
-[![Join the chat at https://gitter.im/fresc81/node-winreg](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fresc81/node-winreg?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![NPM](https://nodei.co/npm/winreg.png?downloads=true&stars=true)](https://nodei.co/npm/winreg/)
+
+[![Dependency Status](https://david-dm.org/fresc81/node-winreg.svg)](https://david-dm.org/fresc81/node-winreg) [![devDependency Status](https://david-dm.org/fresc81/node-winreg/dev-status.svg)](https://david-dm.org/fresc81/node-winreg#info=devDependencies) [![Join the chat at https://gitter.im/fresc81/node-winreg](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fresc81/node-winreg?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+# node-winreg #
 
 node module that provides access to the Windows Registry through the REG commandline tool
 
@@ -27,7 +28,7 @@ Note that the development dependencies will not be installed if this package was
 
 ## Documentation ##
 
-The documentation is generated using [jsdoc](http://github.com/jsdoc3/jsdoc "jsdoc Website") with the [docstrap template](http://terryweiss.github.io/docstrap "docstrap website"). You can view the API documentation [online](http://fresc81.github.io/node-winreg "online documentation"), download the latest documentation or generate it from the sourcecode.
+The documentation is generated using [jsdoc](http://github.com/jsdoc3/jsdoc "jsdoc Website") with the [docstrap template](http://docstrap.github.io/docstrap "docstrap website"). You can view the API documentation [online](http://fresc81.github.io/node-winreg "online documentation"), download the latest documentation or generate it from the sourcecode.
 
 
 ### Online Documentation ###
