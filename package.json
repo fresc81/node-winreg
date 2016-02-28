@@ -4,8 +4,12 @@
   "description": "provides access to the windows registry through the REG tool",
   "main": "lib/registry.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "generate-docs": "jsdoc -c ./jsdoc.conf.json",
+    "download-docs": "git clone -b gh-pages https://github.com/fresc81/node-winreg.git docs",
+    "checkout-docs": "git clone -b gh-pages git@github.com:fresc81/node-winreg.git docs"
   },
+  "homepage": "http://fresc81.github.io/node-winreg",
   "repository": {
     "type": "git",
     "url": "git://github.com/fresc81/node-winreg.git"
@@ -17,5 +21,10 @@
   "author": "Paul Bottin",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "gitHead": "36cfe63a8dcb700cf44b0b7317827099d19c26c1"
+  "gitHead": "36cfe63a8dcb700cf44b0b7317827099d19c26c1",
+  "devDependencies": {
+    "ink-docstrap": "^1.1.4",
+    "jsdoc": "^3.4.0",
+    "moment": "^2.11.2"
+  }
 }
