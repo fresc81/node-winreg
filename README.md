@@ -1,7 +1,7 @@
 
 [![NPM](https://nodei.co/npm/winreg.png?downloads=true&stars=true)](https://nodei.co/npm/winreg/)
 
-[![Dependency Status](https://david-dm.org/fresc81/node-winreg.svg)](https://david-dm.org/fresc81/node-winreg) [![devDependency Status](https://david-dm.org/fresc81/node-winreg/dev-status.svg)](https://david-dm.org/fresc81/node-winreg#info=devDependencies) [![Join the chat at https://gitter.im/fresc81/node-winreg](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fresc81/node-winreg?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build status](https://ci.appveyor.com/api/projects/status/sxal24cfk9nlmib9?svg=true)](https://ci.appveyor.com/project/fresc81/node-winreg) [![Dependency Status](https://david-dm.org/fresc81/node-winreg.svg)](https://david-dm.org/fresc81/node-winreg) [![devDependency Status](https://david-dm.org/fresc81/node-winreg/dev-status.svg)](https://david-dm.org/fresc81/node-winreg#info=devDependencies) [![Join the chat at https://gitter.im/fresc81/node-winreg](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fresc81/node-winreg?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 # node-winreg #
