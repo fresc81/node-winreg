@@ -2,14 +2,6 @@ branches:
   only:
     - master
 
-# Test against this version of Node.js
-#environment:
-#  matrix:
-  # nodejs LTS
-#  - NODEJS_VERSION: "4.3"
-  # nodejs stable
-#  - NODEJS_VERSION: "5"
-
 platform:
   - x86
   - x64
@@ -26,6 +18,8 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
+  # generate documentation
+  - npm run-script generate-docs
   # run tests
   - npm test
 
