@@ -12,6 +12,10 @@ var Registry = require(__dirname+'/lib/registry.js')
       hive: Registry.HKCU,
       key:  '\\Control Panel\\Desktop'
     })
+,   r3 = new Registry({
+      hive: Registry.HKCU,
+      key:  '\\Software\\AAA_' + new Date().toISOString()
+    })
 
 // get parent key
 console.log('parent of "'+r2.path+'" -> "'+r2.parent.path+'"');
@@ -52,6 +56,22 @@ r2
                               if (!err)
                                 console.log('value deleted');
                               
+                              // create key
+                              r3
+                              .   create(function (err) {
+                                    
+                                    if (!err)
+                                      console.log('key created');
+                                    
+                                    // delete key
+                                    r3
+                                    .   destroy(function (err) {
+                                          if (!err)
+                                            console.log('key deleted');
+                                          
+                                        })
+                                  })
+                              ;
                             })
                         ;
                       })
