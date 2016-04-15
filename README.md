@@ -79,6 +79,14 @@ regKey.values(function (err, items /* array of RegistryItem */) {
 
 ```
 
+## Troubleshooting ##
+
+Since Windows Vista access to certain Registry Hives (HKEY_LOCAL_MACHINE or short HKLM for example) is restricted to processes that run in a security elevated context even if the user that starts the process is an admin. You can start a console within that context by right clicking the console shortcut and selecting the item with the shield icon called "Run as administrator" from the context menu.
+
+Under some rare circumstances access to Registry Hives or particular keys may also be blocked by some antivirus programs or the Windows Group Policy Editor (google for gpedit.msc).
+
+You can also use the regedit.exe tool shipped with Windows to check if you actually have access.
+
 
 ## License ##
 
