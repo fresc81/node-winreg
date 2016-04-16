@@ -4,7 +4,7 @@
   "description": "provides access to the windows registry through the REG tool",
   "main": "lib/registry.js",
   "scripts": {
-    "test": "node test.js",
+    "test": "mocha test",
     "generate-docs": "jsdoc -c ./jsdoc.conf.json",
     "download-docs": "git clone -b gh-pages https://github.com/fresc81/node-winreg.git docs",
     "checkout-docs": "git clone -b gh-pages git@github.com:fresc81/node-winreg.git docs"
@@ -25,6 +25,8 @@
   "devDependencies": {
     "ink-docstrap": "^1.1.4",
     "jsdoc": "^3.4.0",
-    "moment": "^2.11.2"
+    "mocha": "^2.4.5",
+    "moment": "^2.11.2",
+    "unit.js": "^2.0.0"
   }
 }
