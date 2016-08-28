@@ -19,13 +19,13 @@
     "registry"
   ],
   "author": "Paul Bottin",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "readmeFilename": "README.md",
   "gitHead": "36cfe63a8dcb700cf44b0b7317827099d19c26c1",
   "devDependencies": {
     "ink-docstrap": "^1.1.4",
     "jsdoc": "^3.4.0",
-    "mocha": "^2.4.5",
+    "mocha": "^3.0.2",
     "moment": "^2.11.2",
     "unit.js": "^2.0.0"
   }
