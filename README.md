@@ -61,11 +61,10 @@ Note that generating the docs requires the development dependencies to be instal
 Let's start with an example. The code below lists the autostart programs of the current user.
 
 ```javascript
-
 var Registry = require('winreg')
 ,   regKey = new Registry({                                       // new operator is optional
       hive: Registry.HKCU,                                        // open registry hive HKEY_CURRENT_USER
-      key:  '\\Software\\Microsoft\\Windows\\CurrentVersion\\Run' // open key containing autostart programs
+      key:  '\\Software\\Microsoft\\Windows\\CurrentVersion\\Run' // key containing autostart programs
     })
 
 // list autostart programs
@@ -76,16 +75,37 @@ regKey.values(function (err, items /* array of RegistryItem */) {
     for (var i=0; i<items.length; i++)
       console.log('ITEM: '+items[i].name+'\t'+items[i].type+'\t'+items[i].value);
 });
-
 ```
 
 ## Troubleshooting ##
+
+
+### Access to restricted keys ###
 
 Since Windows Vista access to certain Registry Hives (HKEY_LOCAL_MACHINE or short HKLM for example) is restricted to processes that run in a security elevated context even if the user that starts the process is an admin. You can start a console within that context by right clicking the console shortcut and selecting the item with the shield icon called "Run as administrator" from the context menu.
 
 Under some rare circumstances access to Registry Hives or particular keys may also be blocked by some antivirus programs or the Windows Group Policy Editor (google for gpedit.msc).
 
 You can also use the regedit.exe tool shipped with Windows to check if you actually have access.
+
+
+### Processing UTF-8 data ###
+
+The Microsoft Windows console isn't capable of handling UTF-8 encoded text unless you set it up properly. If you see weird question marks for certain characters, it's probhably a problem with the encoding.
+
+By default the console is setup to use an encoding that suits the language of the Windows operating system installation. Windows uses codepages to specify encodings for the console. The codepage is a unique number which is assigned to each encoding.
+
+If you want to query the currently selected codepage you can type the command <code>chcp</code> (w/o parameters). To set a new codepage (UTF-8 for this example) you pass the codepage number as the only argument to <code>chcp</code>. The codepage value for UTF-8 is 65001.
+
+You can easily do this from within your nodejs script by using the <code>child_process.execSync(...)</code> function like the following example shows.
+
+```javascript
+var execSync = require('child_process').execSync;
+console.log(execSync('chcp').toString());
+console.log(execSync('chcp 65001').toString());
+```
+
+An even better approach would be to extract and store the value returned by a call to <code>chcp</code> prior setting the console to UTF-8 and resetting the codepage after your script is done.
 
 
 ## License ##
