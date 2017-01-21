@@ -49,6 +49,25 @@ describe('winreg', function(){
     
   });
   
+  it('can change the prototype', function (done) {
+    
+    var magicString = new Date().toISOString();
+
+    Registry.prototype.toString = function () {
+      return magicString;
+    };
+
+    var instance = new Registry({
+      hive: Registry.HKCU,
+      key:  '\\Software'
+    });
+
+    test.string(instance.toString())
+    . is(magicString);
+
+    done();
+  });
+  
   describe('Registry', function (){
     
     describe('keyExists()', function(){
@@ -358,5 +377,5 @@ describe('winreg', function(){
     }); // end - describe destroy()
   
   }); // end - describe Registry
-  
+
 }); // end - describe winreg
