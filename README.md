@@ -17,7 +17,7 @@ The following command installs node-winreg.
 npm install winreg 
 ```
 
-If you prefer to install _without the delopement tools used to generate the HTML documentation_ (into a production environment for example) you should use the following command.
+If you prefer to install _without the development tools used to generate the HTML documentation_ (into a production environment for example) you should use the following command.
 
 ```shell
 npm install winreg --production
