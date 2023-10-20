@@ -87,17 +87,33 @@
 
     <section class="readme-section">
         <article><p><a href="https://nodei.co/npm/winreg/"><img src="https://nodei.co/npm/winreg.png?downloads=true&amp;stars=true" alt="NPM"></a></p>
-<p><a href="https://ci.appveyor.com/project/fresc81/node-winreg"><img src="https://ci.appveyor.com/api/projects/status/sxal24cfk9nlmib9?svg=true" alt="Build status"></a> <a href="https://david-dm.org/fresc81/node-winreg"><img src="https://david-dm.org/fresc81/node-winreg.svg" alt="Dependency Status"></a> <a href="https://david-dm.org/fresc81/node-winreg#info=devDependencies"><img src="https://david-dm.org/fresc81/node-winreg/dev-status.svg" alt="devDependency Status"></a> <a href="https://gitter.im/fresc81/node-winreg?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/fresc81/node-winreg"></a></p>
-<h1>node-winreg</h1><p>node module that provides access to the Windows Registry through the REG commandline tool</p>
-<h2>Installation</h2><p>The following command installs node-winreg.</p>
-<pre class="prettyprint source lang-shell"><code>npm install winreg</code></pre><p>If you prefer to install <em>without the delopement tools used to generate the HTML documentation</em> (into a production environment for example) you should use the following command.</p>
-<pre class="prettyprint source lang-shell"><code>npm install winreg --production</code></pre><p>Note that the development dependencies will not be installed if this package was installed as a dependency of another package.</p>
-<h2>Documentation</h2><p>The documentation is generated using <a href="http://github.com/jsdoc3/jsdoc" title="jsdoc Website">jsdoc</a> with the <a href="http://docstrap.github.io/docstrap" title="docstrap website">docstrap template</a>. You can view the API documentation <a href="http://fresc81.github.io/node-winreg" title="online documentation">online</a>, download the latest documentation or generate it from the sourcecode.</p>
-<h3>Online Documentation</h3><p>View the latest docs <a href="http://fresc81.github.io/node-winreg" title="online documentation">online</a>.</p>
-<h3>Download Documentation</h3><p>To download the latest docs from GIT the following command is used.</p>
-<pre class="prettyprint source lang-shell"><code>npm run-script download-docs</code></pre><h3>Generate Documentation</h3><p>To generate the docs from the sources you can use the following command.</p>
-<pre class="prettyprint source lang-shell"><code>npm run-script generate-docs</code></pre><p>Note that generating the docs requires the development dependencies to be installed.</p>
-<h2>Example Usage</h2><p>Let's start with an example. The code below lists the autostart programs of the current user.</p>
+<p><a href="https://ci.appveyor.com/project/fresc81/node-winreg"><img src="https://ci.appveyor.com/api/projects/status/sxal24cfk9nlmib9?svg=true" alt="Build status"></a><br>
+<a href="https://gitter.im/fresc81/node-winreg?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/fresc81/node-winreg"></a></p>
+<h1>node-winreg</h1>
+<p>node module that provides access to the Windows Registry through the REG commandline tool</p>
+<h2>Installation</h2>
+<p>The following command installs node-winreg.</p>
+<pre class="prettyprint source lang-shell"><code>npm install winreg 
+</code></pre>
+<p>If you prefer to install <em>without the development tools used to generate the HTML documentation</em> (into a production environment for example) you should use the following command.</p>
+<pre class="prettyprint source lang-shell"><code>npm install winreg --production
+</code></pre>
+<p>Note that the development dependencies will not be installed if this package was installed as a dependency of another package.</p>
+<h2>Documentation</h2>
+<p>The documentation is generated using <a href="http://github.com/jsdoc3/jsdoc" title="jsdoc Website">jsdoc</a> with the <a href="http://docstrap.github.io/docstrap" title="docstrap website">docstrap template</a>. You can view the API documentation <a href="http://fresc81.github.io/node-winreg" title="online documentation">online</a>, download the latest documentation or generate it from the sourcecode.</p>
+<h3>Online Documentation</h3>
+<p>View the latest docs <a href="http://fresc81.github.io/node-winreg" title="online documentation">online</a>.</p>
+<h3>Download Documentation</h3>
+<p>To download the latest docs from GIT the following command is used.</p>
+<pre class="prettyprint source lang-shell"><code>npm run-script download-docs
+</code></pre>
+<h3>Generate Documentation</h3>
+<p>To generate the docs from the sources you can use the following command.</p>
+<pre class="prettyprint source lang-shell"><code>npm run-script generate-docs
+</code></pre>
+<p>Note that generating the docs requires the development dependencies to be installed.</p>
+<h2>Example Usage</h2>
+<p>Let's start with an example. The code below lists the autostart programs of the current user.</p>
 <pre class="prettyprint source lang-javascript"><code>var Registry = require('winreg')
 ,   regKey = new Registry({                                       // new operator is optional
       hive: Registry.HKCU,                                        // open registry hive HKEY_CURRENT_USER
@@ -111,17 +127,25 @@ regKey.values(function (err, items /* array of RegistryItem */) {
   else
     for (var i=0; i&lt;items.length; i++)
       console.log('ITEM: '+items[i].name+'\t'+items[i].type+'\t'+items[i].value);
-});</code></pre><h2>Troubleshooting</h2><h3>Access to restricted keys</h3><p>Since Windows Vista access to certain Registry Hives (HKEY_LOCAL_MACHINE or short HKLM for example) is restricted to processes that run in a security elevated context even if the user that starts the process is an admin. You can start a console within that context by right clicking the console shortcut and selecting the item with the shield icon called &quot;Run as administrator&quot; from the context menu.</p>
+});
+</code></pre>
+<h2>Troubleshooting</h2>
+<h3>Access to restricted keys</h3>
+<p>Since Windows Vista access to certain Registry Hives (HKEY_LOCAL_MACHINE or short HKLM for example) is restricted to processes that run in a security elevated context even if the user that starts the process is an admin. You can start a console within that context by right clicking the console shortcut and selecting the item with the shield icon called &quot;Run as administrator&quot; from the context menu.</p>
 <p>Under some rare circumstances access to Registry Hives or particular keys may also be blocked by some antivirus programs or the Windows Group Policy Editor (google for gpedit.msc).</p>
 <p>You can also use the regedit.exe tool shipped with Windows to check if you actually have access.</p>
-<h3>Processing UTF-8 data</h3><p>The Microsoft Windows console isn't capable of handling UTF-8 encoded text unless you set it up properly. If you see weird question marks for certain characters, it's probhably a problem with the encoding.</p>
+<h3>Processing UTF-8 data</h3>
+<p>The Microsoft Windows console isn't capable of handling UTF-8 encoded text unless you set it up properly. If you see weird question marks for certain characters, it's probhably a problem with the encoding.</p>
 <p>By default the console is setup to use an encoding that suits the language of the Windows operating system installation. Windows uses codepages to specify encodings for the console. The codepage is a unique number which is assigned to each encoding.</p>
 <p>If you want to query the currently selected codepage you can type the command <code>chcp</code> (w/o parameters). To set a new codepage (UTF-8 for this example) you pass the codepage number as the only argument to <code>chcp</code>. The codepage value for UTF-8 is 65001.</p>
 <p>You can easily do this from within your nodejs script by using the <code>child_process.execSync(...)</code> function like the following example shows.</p>
 <pre class="prettyprint source lang-javascript"><code>var execSync = require('child_process').execSync;
 console.log(execSync('chcp').toString());
-console.log(execSync('chcp 65001').toString());</code></pre><p>An even better approach would be to extract and store the value returned by a call to <code>chcp</code> prior setting the console to UTF-8 and resetting the codepage after your script is done.</p>
-<h2>License</h2><p>This project is released under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a>.</p>
+console.log(execSync('chcp 65001').toString());
+</code></pre>
+<p>An even better approach would be to extract and store the value returned by a call to <code>chcp</code> prior setting the console to UTF-8 and resetting the codepage after your script is done.</p>
+<h2>License</h2>
+<p>This project is released under <a href="http://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a>.</p>
 <p>Copyright (c) 2016, Paul Bottin All rights reserved.</p>
 <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
 <ul>
@@ -174,13 +198,13 @@ console.log(execSync('chcp 65001').toString());</code></pre><p>An even better ap
 
 
 	<span class="copyright">
-	Copyright &copy; 2016 Paul Bottin.
+	Copyright &copy; 2023 Paul Bottin.
 	</span>
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a>
 	
-		on 2017-01-21T20:00:40+01:00
+		on 2023-10-20T18:45:25+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
