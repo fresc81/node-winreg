@@ -14,7 +14,7 @@ describe('winreg', function(){
   });
   
   // Registry class
-  var Registry = require(__dirname+'/../../lib/registry.js');
+  var Registry = require(__dirname+'/../lib/registry.js');
   
   it('Registry is a class', function () {
     
